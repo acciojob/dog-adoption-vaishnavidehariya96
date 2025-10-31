@@ -1,25 +1,40 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Dog Adoption</title>
-</head>
-<body>
-  <h1>Dog Adoption</h1>
-  <p>Ritesh wants to learn more about these dog breeds. Click on a picture to visit their Wikipedia page!</p>
+// script.js
 
-  <ul>
-    <li>
-      <a href="https://en.wikipedia.org/wiki/Golden_Retriever" target="_blank" rel="noopener noreferrer">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Golden_Retriever_medium-to-light-coat.jpg" alt="Golden Retriever" width="300" />
-      </a>
-    </li>
-    <li>
-      <a href="https://en.wikipedia.org/wiki/Poodle" target="_blank" rel="noopener noreferrer">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/7/70/Toy_Poodle_black.jpg" alt="Poodle" width="300" />
-      </a>
-    </li>
-  </ul>
-</body>
-</html>
+// This script dynamically adds the dog images and links to the list
+
+document.addEventListener("DOMContentLoaded", function() {
+  const dogList = document.createElement("ul");
+
+  // Dog data
+  const dogs = [
+    {
+      name: "Golden Retriever",
+      img: "https://upload.wikimedia.org/wikipedia/commons/5/5f/Golden_Retriever_medium-to-light-coat.jpg",
+      link: "https://en.wikipedia.org/wiki/Golden_Retriever"
+    },
+    {
+      name: "Poodle",
+      img: "https://upload.wikimedia.org/wikipedia/commons/7/70/Toy_Poodle_black.jpg",
+      link: "https://en.wikipedia.org/wiki/Poodle"
+    }
+  ];
+
+  // Create list items dynamically
+  dogs.forEach(dog => {
+    const li = document.createElement("li");
+    const a = document.createElement("a");
+    const img = document.createElement("img");
+
+    a.href = dog.link;
+    a.target = "_blank";
+    img.src = dog.img;
+    img.alt = dog.name;
+    img.width = 300;
+
+    a.appendChild(img);
+    li.appendChild(a);
+    dogList.appendChild(li);
+  });
+
+  document.body.appendChild(dogList);
+});
