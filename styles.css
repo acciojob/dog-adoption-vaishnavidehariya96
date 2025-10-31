@@ -1,33 +1,32 @@
-/* dog-adoption.css */
+/* style.css */
 
+/* Page background and base styles */
 body {
-  background-color: #f7f9fc;
+  background-color: #f5f7fa;
   font-family: 'Poppins', sans-serif;
   text-align: center;
   margin: 0;
   padding: 20px;
 }
 
+/* Page heading */
 h1 {
   color: #2c3e50;
   font-size: 36px;
-  margin-bottom: 10px;
-}
-
-p {
-  color: #555;
-  font-size: 18px;
   margin-bottom: 30px;
 }
 
+/* Unordered list styling */
 ul {
   list-style-type: none;
   padding: 0;
   display: flex;
   justify-content: center;
   gap: 30px;
+  flex-wrap: wrap;
 }
 
+/* Each dog item */
 li {
   background-color: #ffffff;
   border-radius: 12px;
@@ -36,11 +35,13 @@ li {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Hover effect */
 li:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
 }
 
+/* Dog images */
 img {
   border-radius: 10px;
   width: 300px;
