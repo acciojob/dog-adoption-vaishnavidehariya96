@@ -1,24 +1,21 @@
-/* style.css */
-
-/* Page background and base styles */
+/* General page styling */
 body {
-  background-color: #f5f7fa;
-  font-family: 'Poppins', sans-serif;
+  font-family: Arial, sans-serif;
+  background-color: #f9fafc;
   text-align: center;
   margin: 0;
   padding: 20px;
 }
 
-/* Page heading */
+/* Heading */
 h1 {
-  color: #2c3e50;
-  font-size: 36px;
-  margin-bottom: 30px;
+  color: #333;
+  margin-bottom: 20px;
 }
 
 /* Unordered list styling */
 ul {
-  list-style-type: none;
+  list-style-type: none;  /* removes default bullet points */
   padding: 0;
   display: flex;
   justify-content: center;
@@ -26,26 +23,24 @@ ul {
   flex-wrap: wrap;
 }
 
-/* Each dog item */
+/* Each list item */
 li {
   background-color: #ffffff;
-  border-radius: 12px;
+  border-radius: 10px;
   padding: 15px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
 }
 
 /* Hover effect */
 li:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  transform: scale(1.05);
 }
 
-/* Dog images */
+/* Image styling */
 img {
-  border-radius: 10px;
-  width: 300px;
-  height: 220px;
-  object-fit: cover;
+  width: 250px;
+  height: auto;
+  border-radius: 8px;
   cursor: pointer;
 }

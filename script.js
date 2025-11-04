@@ -1,24 +1,21 @@
-// dog-adoption.js
+// Run after the DOM loads
+window.onload = function () {
+  const list = document.querySelector("ul");
+  const listItems = document.querySelectorAll("ul li");
+  const links = document.querySelectorAll("ul li a");
+  const images = document.querySelectorAll("ul li a img");
 
-// Wait until the page is fully loaded
-document.addEventListener("DOMContentLoaded", function() {
-  // Select all images inside the list
-  const dogImages = document.querySelectorAll("ul li img");
+  // Check if list, links, and images exist
+  if (list && listItems.length === 2 && links.length === 2 && images.length === 2) {
+    console.log("✅ Dog Adoption page structure is correct!");
+  } else {
+    console.error("❌ Some elements are missing or not structured correctly.");
+  }
 
-  // Loop through each image and add an event listener
-  dogImages.forEach((img) => {
-    img.addEventListener("click", function() {
-      alert(`You clicked on a ${img.alt}! 🐾`);
-    });
-
-    // Optional: Add hover effect using JS
-    img.addEventListener("mouseover", function() {
-      img.style.transform = "scale(1.05)";
-      img.style.transition = "transform 0.3s ease";
-    });
-
-    img.addEventListener("mouseout", function() {
-      img.style.transform = "scale(1)";
+  // Optional: Add hover effect in console for debugging
+  images.forEach((img, index) => {
+    img.addEventListener("mouseenter", () => {
+      console.log(`Hovered on image ${index + 1}`);
     });
   });
-});
+};
